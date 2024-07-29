@@ -1,0 +1,163 @@
+
+
+@keyframes moveFromBottomToTop {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .congrats_wrapper {
+    width: 500px !important;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: moveFromBottomToTop 2s ease-out;
+  }
+.wrapper_col {
+    padding: 0 !important;
+}
+.congrats_wrapper {
+    /* width: 100%; */
+    width: 500px !important;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 11111;
+
+}
+
+.congrats_header_wrapper {
+    padding: 0;
+    width: 100% !important;
+    height: auto;
+    animation: formFadeIn 2s ease-in-out;
+    position: relative;
+}
+.congrats_header_wrapper .congrats_headerLight {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: auto;
+}
+
+
+
+.congrats_wrapper .congrats_heading_wrapper {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 30px;
+}
+.congrats_wrapper .congrats_heading_wrapper span {
+    color: #fde021;
+    font-size: 50px;
+    font-weight: 700;
+    font-family: var(--gothic-font) !important;
+    letter-spacing: 1.5px;
+    line-height: 32px;
+    text-shadow: 0px 6px 0px #009e4c !important;
+}
+.congrats_wrapper .congrats_para_wrapper {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 50px;
+}
+
+.congrats_wrapper .congrats_para_wrapper p {
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+    font-family: var(--banton-font) !important;
+    letter-spacing: 0;
+    line-height: 10px;
+}
+
+.congrats_wrapper .congrats_image_wrapper {
+    margin-top: calc(100vh - 90vh) !important;
+    text-align: center;
+}
+
+.congrats_wrapper .congrats_image_wrapper img {
+    width: 70% !important;
+}
+
+.congrats_wrapper .congrats_heart_wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-0%,-0%);
+    width: 500px;
+    height: 100vh;
+    z-index: -1;
+}
+
+/* Add keyframes for the animations */
+@keyframes sliderIn {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes formFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .congrats_wrapper {
+        width: 100vw !important;
+    }
+
+    
+.congrats_wrapper .congrats_heart_wrapper {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+}
+
+@media only screen and (max-width: 380px) {
+    .congrats_wrapper .congrats_heading_wrapper {
+        margin-top: 0px !important;
+    }
+    .congrats_wrapper .congrats_heading_wrapper span {
+        color: #fde021;
+        font-size: 42px;
+        font-weight: 500;
+    }
+
+    .congrats_wrapper .congrats_para_wrapper {
+        margin-top: 45px;
+    }
+    
+    .congrats_wrapper .congrats_para_wrapper p {
+        font-size: 15px;
+        font-weight: 600;
+        letter-spacing: -0.6px;
+    }
+
+    .congrats_wrapper .congrats_image_wrapper {
+        margin-top: calc(100vh - 92vh) !important;
+        text-align: center;
+    }
+}
